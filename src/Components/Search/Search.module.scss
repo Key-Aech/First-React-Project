@@ -1,0 +1,53 @@
+.root{
+  position: relative;
+  left: -100px;
+
+  @media(max-width: 1290px){
+    left: 0px;
+  }
+
+  @media(max-width: 1090px){
+    margin-top: 20px;
+  }
+}
+
+.input{
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  height: 42px;
+  padding: 12px, 20px;
+  padding-left: 38px;
+  width: 300px;
+  border-radius: 7px;
+  font-size: 18px;
+  transition: all 0.15s ease-in-out;
+//   @media(min-width: 580px){
+//   &:focus{
+//     border: 2px solid rgba(0, 0, 0, 0.5);
+//     width: 400px;
+//   }
+// }
+}
+
+
+.searchImg{
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.clearImg{
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  cursor: pointer;
+
+  &:hover{
+    opacity: 0.8;
+  } 
+}
