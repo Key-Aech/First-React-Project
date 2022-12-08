@@ -2,11 +2,12 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { setSortTypePick } from '../Redux/Slices/categorySlice';
+import { setSortTypePick } from '../Redux/Slices/filterSlice';
 
 const Sort = () => {
   const dispatch = useDispatch();
-  const isSortTypePicked = useSelector((state) => state.category.sort);
+  const isSortTypePicked = useSelector((state) => state.filter.sort);
+  const sortRef = React.useRef();
 
   let [isVisible, setVisible] = React.useState(false);
   // let [isPicked, setPick] = React.useState(0);
@@ -23,8 +24,10 @@ const Sort = () => {
     setVisible(false);
   };
 
+  console.log(sortRef);
+
   return (
-    <div className="sort">
+    <div ref={sortRef} className="sort">
       <div className="sort__label">
         <svg
           width="10"

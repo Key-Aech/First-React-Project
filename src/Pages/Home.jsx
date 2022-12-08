@@ -12,9 +12,10 @@ import { useSelector } from 'react-redux';
 
 const Home = () => {
   // !Redux
-  const varcategoryId = useSelector((state) => state.category.categoryId);
-  const isSortPicked = useSelector((state) => state.category.sort);
-  const currentPage = useSelector((state) => state.pagination.paginationId);
+  const varcategoryId = useSelector((state) => state.filter.categoryId);
+  const isSortPicked = useSelector((state) => state.filter.sort);
+  const currentPage = useSelector((state) => state.filter.currentPage);
+  console.log(currentPage);
   // !Redux
   let [items, setItems] = React.useState([]);
   let [isLoading, setLoading] = React.useState(true);
@@ -57,7 +58,7 @@ const Home = () => {
       <TopContent />
       <h2 className="content__title">Все пиццы</h2>
       <div className="content__items">{isLoading ? skeletons : pizzas}</div>
-      <Pagination />
+      <Pagination currentPage={currentPage} />
     </div>
   );
 };
