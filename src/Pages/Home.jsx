@@ -15,7 +15,6 @@ const Home = () => {
   const varcategoryId = useSelector((state) => state.filter.categoryId);
   const isSortPicked = useSelector((state) => state.filter.sort);
   const currentPage = useSelector((state) => state.filter.currentPage);
-  console.log(currentPage);
   // !Redux
   let [items, setItems] = React.useState([]);
   let [isLoading, setLoading] = React.useState(true);
